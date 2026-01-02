@@ -73,6 +73,15 @@ fun HomeScreen(
                 )
             }
         },
-    )
+    ){ innerPadding ->
+        HomeBody(
+            statusUiSiswa = viewModel.statusUiSiswa,
+            onSiswaClick = navigateToItemUpdate,
+            retryAction = viewModel::loadSiswa,
+            modifier = modifier
+                .padding(innerPadding)
+                .fillMaxSize()
+        )
+    }
 }
 
