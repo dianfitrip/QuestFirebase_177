@@ -19,3 +19,10 @@ Modifier){
     HostNavigasi(navController = navController)
 }
 
+@Composable
+fun HostNavigasi(
+    navController: NavHostController,
+    modifier: Modifier = Modifier
+){
+
+}
