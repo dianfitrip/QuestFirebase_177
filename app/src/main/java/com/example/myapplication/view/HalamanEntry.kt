@@ -86,7 +86,14 @@ fun EntrySiswaBody(
             onValueChange = onSiswaValueChange,
             modifier = Modifier.fillMaxWidth()
         )
-
+        Button(
+            onClick = onSaveClick,
+            enabled = uiStateSiswa.isEntryValid,
+            shape = MaterialTheme.shapes.small,
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text(stringResource(R.string.btn_submit))
+        }
     }
 }
 
