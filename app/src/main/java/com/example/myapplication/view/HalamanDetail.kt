@@ -1,6 +1,27 @@
 package com.example.myapplication.view
 
-
+import androidx.annotation.StringRes
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.dimensionResource
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.myapplication.R
+import com.example.myapplication.modeldata.Siswa
+import com.example.myapplication.viewmodel.DetailViewModel
+import com.example.myapplication.viewmodel.PenyediaViewModel
+import com.example.myapplication.viewmodel.StatusUIDetail
+import com.example.myapplication.view.route.DestinasiDetail
+import kotlinx.coroutines.launch
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -33,7 +54,7 @@ fun DetailSiswaScreen(
             ) {
                 Icon(
                     imageVector = Icons.Default.Edit,
-                    contentDescription = stringResource(R.string.update_siswa)
+                    contentDescription = stringResource(R.string.update)
                 )
             }
         }, modifier = modifier

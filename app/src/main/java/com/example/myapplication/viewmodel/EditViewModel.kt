@@ -1,6 +1,18 @@
 package com.example.myapplication.viewmodel
 
-
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
+import androidx.lifecycle.SavedStateHandle
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.example.myapplication.modeldata.DetailSiswa
+import com.example.myapplication.modeldata.UIStateSiswa
+import com.example.myapplication.modeldata.toDataSiswa
+import com.example.myapplication.modeldata.toUiStateSiswa
+import com.example.myapplication.repository.RepositorySiswa
+import com.example.myapplication.view.route.DestinasiDetail
+import kotlinx.coroutines.launch
 
 
 class EditViewModel(savedStateHandle: SavedStateHandle, private val repositorySiswa: RepositorySiswa): ViewModel() {
@@ -14,7 +26,7 @@ class EditViewModel(savedStateHandle: SavedStateHandle, private val repositorySi
     init {
         viewModelScope.launch {
             uiStateSiswa = repositorySiswa.getSatuSiswa(idSiswa)!!
-                .toUIStateSiswa(true)
+                .toUiStateSiswa(true)
         }
     }
 

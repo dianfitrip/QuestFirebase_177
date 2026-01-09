@@ -4,12 +4,17 @@ package com.example.myapplication.view.controllNavigasi
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
+import com.example.myapplication.view.DetailSiswaScreen
+import com.example.myapplication.view.EditSiswaScreen
 import com.example.myapplication.view.EntrySiswaScreen
 import com.example.myapplication.view.HomeScreen
 import com.example.myapplication.view.route.DestinasiDetail
+import com.example.myapplication.view.route.DestinasiEdit
 import com.example.myapplication.view.route.DestinasiEntry
 import com.example.myapplication.view.route.DestinasiHome
 
